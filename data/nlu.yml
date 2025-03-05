@@ -89,3 +89,25 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+- intent: provide_name
+  examples: |
+    - My name is [Arbaz](name).
+    - Call me [John](name).
+    - I am [Alice](name).
+    - [Michael](name)
+
+- intent: provide_student_number
+  examples: |
+    - My student number is [123456](student_number).
+    - It's [987654](student_number).
+    - Here is my student number: [654321](student_number).
+    - [765432](student_number)
+
+- intent: provide_city
+  examples: |
+    - [London](city)
+    - It's [Paris](city)
+    - I want the weather in [Berlin](city)
+    - Show me the forecast for [New York](city)
+    - Check [Mumbai](city)
+

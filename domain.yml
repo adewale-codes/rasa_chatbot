@@ -8,26 +8,69 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - provide_name
+  - provide_student_number
+  - ask_weather
+  - provide_city
+
+
+slots:
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: name
+      - type: from_text  # Allow raw input
+
+  student_number:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: student_number
+      - type: from_text
+
+  city:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: city
+      - type: from_text
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+    - text: "Hey! How are you?"
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+    - text: "Did that help you?"
 
   utter_happy:
-  - text: "Great, carry on!"
+    - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye"
+    - text: "Bye"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+    - text: "I am a bot, powered by Rasa."
+
+  utter_ask_name:
+    - text: "What is your name?"
+
+  utter_ask_student_number:
+    - text: "Can you provide your student number?"
+
+  utter_ask_city:
+    - text: "Which city's weather would you like to check?"
+
+actions:
+  - action_get_weather
+  - action_store_user_info
 
 session_config:
   session_expiration_time: 60

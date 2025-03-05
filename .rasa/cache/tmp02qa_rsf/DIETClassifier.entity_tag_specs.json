@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-city",
+      "2": "I-city",
+      "3": "L-city",
+      "4": "U-city",
+      "5": "B-name",
+      "6": "I-name",
+      "7": "L-name",
+      "8": "U-name",
+      "9": "B-student_number",
+      "10": "I-student_number",
+      "11": "L-student_number",
+      "12": "U-student_number",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-city": 1,
+      "I-city": 2,
+      "L-city": 3,
+      "U-city": 4,
+      "B-name": 5,
+      "I-name": 6,
+      "L-name": 7,
+      "U-name": 8,
+      "B-student_number": 9,
+      "I-student_number": 10,
+      "L-student_number": 11,
+      "U-student_number": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

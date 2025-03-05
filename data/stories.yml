@@ -28,3 +28,23 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: ask for name and student number
+  steps:
+  - intent: provide_name
+  - action: utter_ask_student_number
+  - intent: provide_student_number
+  - action: action_store_user_info
+
+- story: ask weather
+  steps:
+  - intent: ask_weather
+  - action: utter_ask_city
+  - intent: provide_city
+  - action: action_get_weather
+
+# - story: lsbu story
+#   steps:
+#   - intent: lsbu
+#   - action: utter_lsbu
+
